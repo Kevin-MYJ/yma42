@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>CourSys - Formula Tester</title>
+	<link rel="stylesheet" type="text/css" href="calculator.css">
+</head>
+<body>
+	<script src="calculator.js"></script>
+	<div class="container">
+	<div class="box-1">
+		<h1>Grade Calculator</h1>
+		<br>
+		<div class="box-2">
+			<h3>Activities</h3>
+			<p>Give grades to the numeric activities:</p>
+			<div class="table">
+				<table>
+					<thead>
+						<tr>
+							<th>Name</th>
+							<th>Short Name</th>
+							<th>Weight</th>
+							<th>Grade</th>
+							<th>Percent</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Activity 1</td>
+							<td>A1</td>
+							<form id="isNumA1">
+								<td>
+									<input id="A1-wei" type="number" name="weight" min="0" max="1000" oninput="Per1()" />
+								</td>
+								<td>
+									<input id="A1-num" type="number" name="numerator" min="0" max="1000" oninput="Per1()"/>/<br>
+									<input id="A1-den" type="number" name="denominator" min="0" max="1000" oninput="Per1()"/>
+								</td>
+								<td id = "percent1" class="percent"></td>
+							</form>
+						</tr>
+						<tr>
+							<td>Activity 2</td>
+							<td>A2</td>
+							<form id="isNumA2">
+								<td>
+									<input id="A2-wei" type="number" name="weight" min="0" max="1000" oninput="Per2()"/>
+								</td>
+								<td>
+									<input id="A2-num" type="number" name="numerator" min="0" max="1000" oninput="Per2()"/>/<br>
+									<input id="A2-den" type="number" name="denominator" min="0" max="1000" oninput="Per2()" />
+								</td>
+								<td id = "percent2" class="percent"></td>
+							</form>
+						</tr>
+						<tr>
+							<td>Activity 3</td>
+							<td>A3</td>
+							<form id="isNumA3">
+								<td>
+									<input id="A3-wei" type="number" name="weight" min="0" max="1000" oninput="Per3()"/>
+								</td>
+								<td>
+									<input id="A3-num" type="number" name="numerator" min="0" max="1000" oninput="Per3()"/>/<br>
+									<input id="A3-den" type="number" name="denominator" min="0" max="1000" oninput="Per3()" />
+								</td>
+								<td id = "percent3" class="percent"></td>
+							</form>
+						</tr>
+						<tr>
+							<td>Activity 4</td>
+							<td>A4</td>
+							<form id="isNumA4">
+								<td>
+									<input id="A4-wei" type="number" name="weight" min="0" max="1000" oninput="Per4()"/>
+								</td>
+								<td>
+									<input id="A4-num" type="number" name="numerator" min="0" max="1000" oninput="Per4()"/>/<br>
+									<input id="A4-den" type="number" name="denominator" min="0" max="1000" oninput="Per4()" />
+								</td>
+								<td id = "percent4" class="percent"></td>
+							</form>
+						</tr>
+					</tbody>
+				</table>
+			</div> <!-- table -->
+
+			<h3>Result</h3>
+			<p id="result">&nbsp;&nbsp;&nbsp;&nbsp;</p>
+			<div class="result">
+				<button type="button" onclick="calweight()" id="button-w">WEIGHT</button>
+				<button type="button" onclick="calmean()" id="button-m">MEAN</button>
+			</div>
+			</div> <!-- box-2 -->
+	</div> <!-- box-1 -->
+	</div> <!-- container -->
+</body>
+</html>
