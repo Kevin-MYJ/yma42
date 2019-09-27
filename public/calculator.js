@@ -5,6 +5,11 @@ var percent = ["", "", "", ""];
 
 // Percent 1
 function Per1(){
+    if(document.getElementById("A1-num").value < 0 || document.getElementById("A1-den").value < 0){
+        window.alert("Error: Please enter positive number.");
+        return;
+    }
+
     weight[0] = document.getElementById("A1-wei").value;
     numerator[0] = document.getElementById("A1-num").value;
     denominator[0] = document.getElementById("A1-den").value;
@@ -16,10 +21,16 @@ function Per1(){
         percent[0] = ""; 
         document.getElementById("percent1").innerHTML = " ";
     }
+
 }
 
 // Percent 2
 function Per2(){
+    if(document.getElementById("A2-num").value < 0 || document.getElementById("A2-den").value < 0){
+        window.alert("Error: Please enter positive number.");
+        return;
+    }
+
     weight[1] = document.getElementById("A2-wei").value;
     numerator[1] = document.getElementById("A2-num").value;
     denominator[1] = document.getElementById("A2-den").value;
@@ -35,6 +46,11 @@ function Per2(){
 
 // Percent 3
 function Per3(){
+    if(document.getElementById("A3-num").value < 0 || document.getElementById("A3-den").value < 0){
+        window.alert("Error: Please enter positive number.");
+        return;
+    }
+
     weight[2] = document.getElementById("A3-wei").value;
     numerator[2] = document.getElementById("A3-num").value;
     denominator[2] = document.getElementById("A3-den").value;
@@ -50,6 +66,11 @@ function Per3(){
 
 // Percent 4
 function Per4(){
+    if(document.getElementById("A4-num").value < 0 || document.getElementById("A4-den").value < 0){
+        window.alert("Error: Please enter positive number.");
+        return;
+    }
+
     weight[3] = document.getElementById("A4-wei").value;
     numerator[3] = document.getElementById("A4-num").value;
     denominator[3] = document.getElementById("A4-den").value;
@@ -69,6 +90,10 @@ function calweight(){
     var sum = 0;
     var n = 0;
     for(let i = 0; i<4; i++){
+        if(weight[i] < 0){
+            window.alert("Error: Please enter positive number.");
+            return;
+        }
         if(weight[i] != "" && percent[i] != ""){
             sum = Number(sum) + Number(percent[i])*Number(weight[i]);
             n = Number(n) + Number(weight[i]);
